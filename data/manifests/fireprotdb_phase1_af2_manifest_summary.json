@@ -1,0 +1,9 @@
+{
+  "input_csv": "data/processed/fireprotdb_phase1_ddg_clean.csv",
+  "manifest_csv": "data/manifests/fireprotdb_phase1_af2_manifest.csv",
+  "manifest_rows": 5173,
+  "mutant_dir": "data/interim/fasta/mutant",
+  "unique_mutant_fastas": 5173,
+  "unique_wt_fastas": 177,
+  "wt_dir": "data/interim/fasta/wild_type"
+}

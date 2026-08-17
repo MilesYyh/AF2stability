@@ -1,0 +1,35 @@
+{
+  "batch_size_requested": 1024,
+  "device": "cuda",
+  "epochs_requested": 1000,
+  "feature_dim": 1152,
+  "final_train_loss": 0.0004837531450903043,
+  "include_sample_ids": false,
+  "input_npz": "/data/store-data/yeyh/scripts/AF2stab/data/processed/single_repr_features_full_partial.npz",
+  "learning_rate": 0.0001,
+  "min_train_loss": 0.0004837531450903043,
+  "mode": "holdout",
+  "num_samples": 2473,
+  "predictions_csv": "/data/store-data/yeyh/scripts/AF2stab/results/models/ddg_mlp_full_partial_holdout_predictions.csv",
+  "run_mode_requested": "holdout",
+  "seed": 42,
+  "state_dict_path": "/data/store-data/yeyh/scripts/AF2stab/results/models/ddg_mlp_full_partial_holdout_state_dict.pt",
+  "train_eval_loss": 0.00046770169865339994,
+  "train_metrics": {
+    "mae": 0.014459989964962006,
+    "mse": 0.0009280169615522027,
+    "pearson": 0.999876987336247,
+    "rmse": 0.03046337081729799
+  },
+  "train_size": 1978,
+  "val_eval_loss": 0.6392055749893188,
+  "val_fraction": 0.2,
+  "val_metrics": {
+    "mae": 1.0184098482131958,
+    "mse": 2.061929702758789,
+    "pearson": 0.6710418328756625,
+    "rmse": 1.4359420958934204
+  },
+  "val_size": 495,
+  "version": "1.0.0"
+}

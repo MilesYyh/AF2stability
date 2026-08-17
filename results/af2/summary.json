@@ -1,0 +1,19 @@
+{
+  "data_dir": "/data/AFDB",
+  "gpu_ids": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "input_manifest": "/data/store-data/yeyh/scripts/AF2stab/data/manifests/fireprotdb_phase1_af2_manifest.csv",
+  "log_dir": "/data/store-data/yeyh/scripts/AF2stab/results/af2/single-repr-full/logs",
+  "output_dir": "/data/store-data/yeyh/scripts/AF2stab/results/af2/single-repr-full/outputs",
+  "run_alphafold_source_path": "/data/store-data/yeyh/scripts/AF2stab/alphafold2/run_alphafold.py",
+  "run_script": "/data/store-data/yeyh/scripts/AF2stab/alphafold2/docker/run_docker.py",
+  "runner_script": "/data/store-data/yeyh/scripts/AF2stab/results/af2/single-repr-full/run_single_repr_full.sh",
+  "save_single_representation": true,
+  "total_rows": 5173,
+  "total_tasks": 5350,
+  "unique_wt_sequences": 177
+}

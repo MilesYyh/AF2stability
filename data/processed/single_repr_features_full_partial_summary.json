@@ -1,0 +1,163 @@
+{
+  "feature_matrix_shape": [
+    2473,
+    1152
+  ],
+  "input_manifest": "data/manifests/fireprotdb_phase1_af2_manifest.csv",
+  "label_shape": [
+    2473
+  ],
+  "manifest_rows": 5173,
+  "missing_examples": [
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__E107V/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__E107V",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__F109V/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__F109V",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__W120F/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__W120F",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__W120L/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__W120L",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__A122V/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__A122V",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124A/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124A",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124G/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124G",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124H/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124H",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124L/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124L",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124N/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124N",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124R/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124R",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124T/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124T",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124V/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124V",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__S124Y/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__S124Y",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__T127A/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__T127A",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__G128A/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__G128A",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__I133L/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__I133L",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__I133V/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__I133V",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__V138A/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__V138A",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    },
+    {
+      "mut_repr_path": "results/af2/single-repr-full/outputs/P06241__V138F/single_repr_model_1_pred_0.npy",
+      "protein_id": "P06241",
+      "reason": "missing_mutant",
+      "sample_id": "P06241__V138F",
+      "wt_repr_path": "results/af2/single-repr-full/outputs/P06241/single_repr_model_1_pred_0.npy"
+    }
+  ],
+  "model_name": "model_1_pred_0",
+  "output_csv": "data/processed/single_repr_features_full_partial.csv",
+  "output_npz": "data/processed/single_repr_features_full_partial.npz",
+  "repr_output_dir": "results/af2/single-repr-full/outputs",
+  "rows_extracted": 2473,
+  "rows_missing_any": 2700,
+  "rows_missing_both": 2675,
+  "rows_missing_mut_only": 25,
+  "rows_missing_wt_only": 0,
+  "strict_missing": false
+}

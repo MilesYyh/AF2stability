@@ -1,0 +1,397 @@
+I0812 05:27:04.270000 22941053982528 run_docker.py:124] Mounting /data/store-data/yeyh/scripts/AF2stab/data/interim/fasta/mutant -> /mnt/fasta_path_0
+I0812 05:27:04.270873 22941053982528 run_docker.py:124] Mounting /data/AFDB/uniref90 -> /mnt/uniref90_database_path
+I0812 05:27:04.270963 22941053982528 run_docker.py:124] Mounting /data/AFDB/mgnify -> /mnt/mgnify_database_path
+I0812 05:27:04.271033 22941053982528 run_docker.py:124] Mounting /data/AFDB -> /mnt/data_dir
+I0812 05:27:04.271100 22941053982528 run_docker.py:124] Mounting /data/AFDB/pdb_mmcif/mmcif_files -> /mnt/template_mmcif_dir
+I0812 05:27:04.271172 22941053982528 run_docker.py:124] Mounting /data/AFDB/pdb_mmcif -> /mnt/obsolete_pdbs_path
+I0812 05:27:04.271250 22941053982528 run_docker.py:124] Mounting /data/AFDB/pdb70 -> /mnt/pdb70_database_path
+I0812 05:27:04.271328 22941053982528 run_docker.py:124] Mounting /data/AFDB/uniref30 -> /mnt/uniref30_database_path
+I0812 05:27:04.271407 22941053982528 run_docker.py:124] Mounting /data/AFDB/bfd -> /mnt/bfd_database_path
+I0812 05:27:04.271494 22941053982528 run_docker.py:124] Mounting /data/store-data/yeyh/scripts/AF2stab/alphafold2 -> /mnt/custom_run_alphafold
+I0812 05:27:09.356206 22941053982528 run_docker.py:275] I0811 21:27:09.354372 140062139142784 templates.py:858] Using precomputed obsolete pdbs /mnt/obsolete_pdbs_path/obsolete.dat.
+I0812 05:27:10.444836 22941053982528 run_docker.py:275] I0811 21:27:10.443807 140062139142784 xla_bridge.py:863] Unable to initialize backend 'rocm': NOT_FOUND: Could not find registered platform with name: "rocm". Available platform names are: CUDA
+I0812 05:27:10.445194 22941053982528 run_docker.py:275] I0811 21:27:10.444973 140062139142784 xla_bridge.py:863] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+I0812 05:27:33.796472 22941053982528 run_docker.py:275] I0811 21:27:33.794990 140062139142784 run_alphafold.py:539] Have 5 models: ['model_1_pred_0', 'model_2_pred_0', 'model_3_pred_0', 'model_4_pred_0', 'model_5_pred_0']
+I0812 05:27:33.796792 22941053982528 run_docker.py:275] I0811 21:27:33.795308 140062139142784 run_alphafold.py:553] Using random seed 1531987511702664616 for the data pipeline
+I0812 05:27:33.796870 22941053982528 run_docker.py:275] I0811 21:27:33.795682 140062139142784 run_alphafold.py:249] Predicting P02751__I1627A
+I0812 05:27:33.810132 22941053982528 run_docker.py:275] I0811 21:27:33.809237 140062139142784 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /tmp/tmpprf8qi43/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /mnt/fasta_path_0/P02751__I1627A.fasta /mnt/uniref90_database_path/uniref90.fasta"
+I0812 05:27:33.811153 22941053982528 run_docker.py:275] I0811 21:27:33.810441 140062139142784 utils.py:36] Started Jackhmmer (uniref90.fasta) query
+I0812 05:50:20.279257 22941053982528 run_docker.py:275] I0811 21:50:20.278336 140062139142784 utils.py:40] Finished Jackhmmer (uniref90.fasta) query in 1366.468 seconds
+I0812 05:50:39.324288 22941053982528 run_docker.py:275] I0811 21:50:39.323337 140062139142784 jackhmmer.py:133] Launching subprocess "/usr/bin/jackhmmer -o /dev/null -A /tmp/tmppycey0ix/output.sto --noali --F1 0.0005 --F2 5e-05 --F3 5e-07 --incE 0.0001 -E 0.0001 --cpu 8 -N 1 /mnt/fasta_path_0/P02751__I1627A.fasta /mnt/mgnify_database_path/mgy_clusters_2022_05.fa"
+I0812 05:50:39.325696 22941053982528 run_docker.py:275] I0811 21:50:39.324844 140062139142784 utils.py:36] Started Jackhmmer (mgy_clusters_2022_05.fa) query
+I0812 06:09:05.799571 22941053982528 run_docker.py:275] I0811 22:09:05.798339 140062139142784 utils.py:40] Finished Jackhmmer (mgy_clusters_2022_05.fa) query in 1106.473 seconds
+I0812 06:09:15.264862 22941053982528 run_docker.py:275] I0811 22:09:15.263874 140062139142784 hhsearch.py:85] Launching subprocess "/usr/bin/hhsearch -i /tmp/tmpw8tig8fz/query.a3m -o /tmp/tmpw8tig8fz/output.hhr -maxseq 1000000 -d /mnt/pdb70_database_path/pdb70"
+I0812 06:09:15.266119 22941053982528 run_docker.py:275] I0811 22:09:15.265337 140062139142784 utils.py:36] Started HHsearch query
+I0812 06:11:08.318979 22941053982528 run_docker.py:275] I0811 22:11:08.318010 140062139142784 utils.py:40] Finished HHsearch query in 113.053 seconds
+I0812 06:11:16.044133 22941053982528 run_docker.py:275] I0811 22:11:16.042765 140062139142784 hhblits.py:128] Launching subprocess "/usr/bin/hhblits -i /mnt/fasta_path_0/P02751__I1627A.fasta -cpu 4 -oa3m /tmp/tmp6kryt17f/output.a3m -o /dev/null -n 3 -e 0.001 -maxseq 1000000 -realign_max 100000 -maxfilt 100000 -min_prefilter_hits 1000 -d /mnt/bfd_database_path/bfd_metaclust_clu_complete_id30_c90_final_seq.sorted_opt -d /mnt/uniref30_database_path/UniRef30_2021_03"
+I0812 06:11:16.045044 22941053982528 run_docker.py:275] I0811 22:11:16.044272 140062139142784 utils.py:36] Started HHblits query
+I0812 08:44:46.913949 22941053982528 run_docker.py:275] I0812 00:44:46.912927 140062139142784 utils.py:40] Finished HHblits query in 9210.868 seconds
+I0812 08:44:48.325905 22941053982528 run_docker.py:275] I0812 00:44:48.266351 140062139142784 templates.py:879] Searching for template for: MLRGPGPGLLLLAVQCLGTAVPSTGASKSKRQAQQMVQPQSPVAVSQSKPGCYDNGKHYQINQQWERTYLGNALVCTCYGGSRGFNCESKPEAEETCFDKYTGNTYRVGDTYERPKDSMIWDCTCIGAGRGRISCTIANRCHEGGQSYKIGDTWRRPHETGGYMLECVCLGNGKGEWTCKPIAEKCFDHAAGTSYVVGETWEKPYQGWMMVDCTCLGEGSGRITCTSRNRCNDQDTRTSYRIGDTWSKKDNRGNLLQCICTGNGRGEWKCERHTSVQTTSSGSGPFTDVRAAVYQPQPHPQPPPYGHCVTDSGVVYSVGMQWLKTQGNKQMLCTCLGNGVSCQETAVTQTYGGNSNGEPCVLPFTYNGRTFYSCTTEGRQDGHLWCSTTSNYEQDQKYSFCTDHTVLVQTRGGNSNGALCHFPFLYNNHNYTDCTSEGRRDNMKWCGTTQNYDADQKFGFCPMAAHEEICTTNEGVMYRIGDQWDKQHDMGHMMRCTCVGNGRGEWTCIAYSQLRDQCIVDDITYNVNDTFHKRHEEGHMLNCTCFGQGRGRWKCDPVDQCQDSETGTFYQIGDSWEKYVHGVRYQCYCYGRGIGEWHCQPLQTYPSSSGPVEVFITETPSQPNSHPIQWNAPQPSHISKYILRWRPKNSVGRWKEATIPGHLNSYTIKGLKPGVVYEGQLISIQQYGHQEVTRFDFTTTSTSTPVTSNTVTGETTPFSPLVATSESVTEITASSFVVSWVSASDTVSGFRVEYELSEEGDEPQYLDLPSTATSVNIPDLLPGRKYIVNVYQISEDGEQSLILSTSQTTAPDAPPDTTVDQVDDTSIVVRWSRPQAPITGYRIVYSPSVEGSSTELNLPETANSVTLSDLQPGVQYNITIYAVEENQESTPVVIQQETTGTPRSDTVPSPRDLQFVEVTDVKVTIMWTPPESAVTGYRVDVIPVNLPGEHGQRLPISRNTFAEVTGLSPGVTYYFKVFAVSHGRESKPLTAQQTTKLDAPTNLQFVNETDSTVLVRWTPPRAQITGYRLTVGLTRRGQPRQYNVGPSVSKYPLRNLQPASEYTVSLVAIKGNQESPKATGVFTTLQPGSSIPPYNTEVTETTIVITWTPAPRIGFKLGVRPSQGGEAPREVTSDSGSIVVSGLTPGVEYVYTIQVLRDGQERDAPIVNKVVTPLSPPTNLHLEANPDTGVLTVSWERSTTPDITGYRITTTPTNGQQGNSLEEVVHADQSSCTFDNLSPGLEYNVSVYTVKDDKESVPISDTIIPEVPQLTDLSFVDITDSSIGLRWTPLNSSTIIGYRITVVAAGEGIPIFEDFVDSSVGYYTVTGLEPGIDYDISVITLINGGESAPTTLTQQTAVPPPTDLRFTNIGPDTMRVTWAPPPSIDLTNFLVRYSPVKNEEDVAELSISPSDNAVVLTNLLPGTEYVVSVSSVYEQHESTPLRGRQKTGLDSPTGIDFSDITANSFTVHWIAPRATITGYRIRHHPEHFSGRPREDRVPHSRNSITLTNLTPGTEYVVSIVALNGREESPLLIGQQSTVSDVPRDLEVVAATPTSLLISWDAPAVTVRYYRITYGETGGNSPVQEFTVPGSKSTATISGLKPGVDYTITVYAVTGRGDSPASSKPISANYRTEIDKPSQMQVTDVQDNSISVKWLPSSSPVTGYRVTTTPKNGPGPTKTKTAGPDQTEMTIEGLQPTVEYVVSVYAQNPSGESQPLVQTAVTNIDRPKGLAFTDVDVDSIKIAWESPQGQVSRYRVTYSSPEDGIHELFPAPDGEEDTAELQGLRPGSEYTVSVVALHDDMESQPLIGTQSTAIPAPTDLKFTQVTPTSLSAQWTPPNVQLTGYRVRVTPKEKTGPMKEINLAPDSSSVVVSGLMVATKYEVSVYALKDTLTSRPAQGVVTTLENVSPPRRARVTDATETTITISWRTKTETITGFQVDAVPANGQTPIQRTIKPDVRSYTITGLQPGTDYKIYLYTLNDNARSSPVVIDASTAIDAPSNLRFLATTPNSLLVSWQPPRARITGYIIKYEKPGSPPREVVPRPRPGVTEATITGLEPGTEYTIYVIALKNNQKSEPLIGRKKTDELPQLVTLPHPNLHGPEILDVPSTVQKTPFVTHPGYDTGNGIQLPGTSGQQPSVGQQMIFEEHGFRRTTPPTTATPIRHRPRPYPPNVGEEIQIGHIPREDVDYHLYPHGPGLNPNASTGQEALSQTTISWAPFQDTSEYIISCHPVGTDEEPLQFRVPGTSTSATLTGLTRGATYNVIVEALKDQQRHKVREEVVTVGNSVNEGLNQPTDDSCFDPYTVSHYAVGDEWERMSESGFKLLCQCLGFGSGHFRCDSSRWCHDNGVNYKIGEKWDRQGENGQMMSCTCLGNGKGEFKCDPHEATCYDDGKTYHVGEQWQKEYLGAICSCTCFGGQRGWRCDNCRRPGGEPSPEGTTGQSYNQYSQRYHQRTNTNVNCPIECFMPLDVQADREDSRE
+I0812 08:44:48.460722 22941053982528 run_docker.py:275] I0812 00:44:48.460074 140062139142784 templates.py:267] Found an exact template match 3l5h_A.
+I0812 08:44:48.476767 22941053982528 run_docker.py:275] I0812 00:44:48.476442 140062139142784 templates.py:267] Found an exact template match 3l5h_A.
+I0812 08:44:49.139912 22941053982528 run_docker.py:275] I0812 00:44:49.139015 140062139142784 templates.py:267] Found an exact template match 4yh7_A.
+I0812 08:44:49.157684 22941053982528 run_docker.py:275] I0812 00:44:49.157247 140062139142784 templates.py:267] Found an exact template match 4yh7_A.
+I0812 08:44:49.175193 22941053982528 run_docker.py:275] I0812 00:44:49.174738 140062139142784 templates.py:267] Found an exact template match 4yh7_A.
+I0812 08:44:49.192622 22941053982528 run_docker.py:275] I0812 00:44:49.192246 140062139142784 templates.py:267] Found an exact template match 3l5h_A.
+I0812 08:44:49.209749 22941053982528 run_docker.py:275] I0812 00:44:49.209372 140062139142784 templates.py:267] Found an exact template match 3l5h_A.
+I0812 08:44:49.226269 22941053982528 run_docker.py:275] I0812 00:44:49.225843 140062139142784 templates.py:267] Found an exact template match 4yh7_A.
+I0812 08:44:49.380609 22941053982528 run_docker.py:275] I0812 00:44:49.380373 140062139142784 templates.py:267] Found an exact template match 3t1w_A.
+I0812 08:44:49.465589 22941053982528 run_docker.py:275] I0812 00:44:49.465227 140062139142784 templates.py:267] Found an exact template match 3m7p_A.
+I0812 08:44:49.589011 22941053982528 run_docker.py:275] I0812 00:44:49.588734 140062139142784 templates.py:267] Found an exact template match 1fnf_A.
+I0812 08:44:49.695239 22941053982528 run_docker.py:275] I0812 00:44:49.695021 140062139142784 templates.py:267] Found an exact template match 6mfa_A.
+I0812 08:44:49.998775 22941053982528 run_docker.py:275] I0812 00:44:49.998334 140062139142784 templates.py:267] Found an exact template match 2q7n_C.
+I0812 08:44:50.011920 22941053982528 run_docker.py:275] I0812 00:44:50.011644 140062139142784 templates.py:267] Found an exact template match 1fnf_A.
+I0812 08:44:50.023598 22941053982528 run_docker.py:275] I0812 00:44:50.023381 140062139142784 templates.py:267] Found an exact template match 2q7n_C.
+I0812 08:44:50.038218 22941053982528 run_docker.py:275] I0812 00:44:50.038006 140062139142784 templates.py:267] Found an exact template match 2q7n_C.
+I0812 08:44:50.053223 22941053982528 run_docker.py:275] I0812 00:44:50.052865 140062139142784 templates.py:267] Found an exact template match 3t1w_A.
+I0812 08:44:50.066279 22941053982528 run_docker.py:275] I0812 00:44:50.066003 140062139142784 templates.py:267] Found an exact template match 2q7n_C.
+I0812 08:44:50.081294 22941053982528 run_docker.py:275] I0812 00:44:50.081084 140062139142784 templates.py:267] Found an exact template match 3t1w_A.
+I0812 08:44:50.093955 22941053982528 run_docker.py:275] I0812 00:44:50.093746 140062139142784 templates.py:267] Found an exact template match 1fnf_A.
+I0812 08:44:53.932143 22941053982528 run_docker.py:275] I0812 00:44:53.931136 140062139142784 pipeline.py:234] Uniref90 MSA size: 10000 sequences.
+I0812 08:44:53.932396 22941053982528 run_docker.py:275] I0812 00:44:53.931490 140062139142784 pipeline.py:235] BFD MSA size: 11578 sequences.
+I0812 08:44:53.932475 22941053982528 run_docker.py:275] I0812 00:44:53.931523 140062139142784 pipeline.py:236] MGnify MSA size: 501 sequences.
+I0812 08:44:53.932564 22941053982528 run_docker.py:275] I0812 00:44:53.931556 140062139142784 pipeline.py:237] Final (deduplicated) MSA size: 15990 sequences.
+I0812 08:44:53.932617 22941053982528 run_docker.py:275] I0812 00:44:53.932119 140062139142784 pipeline.py:239] Total number of templates (NB: this can include bad templates and is later filtered to top 4): 20.
+I0812 08:44:54.515713 22941053982528 run_docker.py:275] I0812 00:44:54.515034 140062139142784 run_alphafold.py:280] Running model model_1_pred_0 on P02751__I1627A
+I0812 08:45:22.073520 22941053982528 run_docker.py:275] I0812 00:45:22.072645 140062139142784 model.py:179] Running predict with shape(feat) = {'aatype': (4, 2477), 'residue_index': (4, 2477), 'seq_length': (4,), 'template_aatype': (4, 4, 2477), 'template_all_atom_masks': (4, 4, 2477, 37), 'template_all_atom_positions': (4, 4, 2477, 37, 3), 'template_sum_probs': (4, 4, 1), 'is_distillation': (4,), 'seq_mask': (4, 2477), 'msa_mask': (4, 508, 2477), 'msa_row_mask': (4, 508), 'random_crop_to_size_seed': (4, 2), 'template_mask': (4, 4), 'template_pseudo_beta': (4, 4, 2477, 3), 'template_pseudo_beta_mask': (4, 4, 2477), 'atom14_atom_exists': (4, 2477, 14), 'residx_atom14_to_atom37': (4, 2477, 14), 'residx_atom37_to_atom14': (4, 2477, 37), 'atom37_atom_exists': (4, 2477, 37), 'extra_msa': (4, 5120, 2477), 'extra_msa_mask': (4, 5120, 2477), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 508, 2477), 'true_msa': (4, 508, 2477), 'extra_has_deletion': (4, 5120, 2477), 'extra_deletion_value': (4, 5120, 2477), 'msa_feat': (4, 508, 2477, 49), 'target_feat': (4, 2477, 22)}
+I0812 10:07:08.954549 22941053982528 run_docker.py:275] I0812 02:07:08.953525 140062139142784 model.py:217] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (2477, 2477, 64)}, 'experimentally_resolved': {'logits': (2477, 37)}, 'masked_msa': {'logits': (508, 2477, 23)}, 'predicted_lddt': {'logits': (2477, 50)}, 'representations': {'msa': (508, 2477, 256), 'msa_first_row': (2477, 256), 'pair': (2477, 2477, 128), 'single': (2477, 384), 'structure_module': (2477, 384)}, 'structure_module': {'final_atom_mask': (2477, 37), 'final_atom_positions': (2477, 37, 3)}, 'plddt': (2477,), 'ranking_confidence': ()}
+I0812 10:07:09.101240 22941053982528 run_docker.py:275] I0812 02:07:09.100504 140062139142784 run_alphafold.py:295] Total JAX model model_1_pred_0 on P02751__I1627A predict time (includes compilation time, see --benchmark): 4907.0s
+I0812 10:09:43.163799 22941053982528 run_docker.py:275] I0812 02:09:43.162646 140062139142784 run_alphafold.py:280] Running model model_2_pred_0 on P02751__I1627A
+I0812 10:10:09.725212 22941053982528 run_docker.py:275] I0812 02:10:09.723298 140062139142784 model.py:179] Running predict with shape(feat) = {'aatype': (4, 2477), 'residue_index': (4, 2477), 'seq_length': (4,), 'template_aatype': (4, 4, 2477), 'template_all_atom_masks': (4, 4, 2477, 37), 'template_all_atom_positions': (4, 4, 2477, 37, 3), 'template_sum_probs': (4, 4, 1), 'is_distillation': (4,), 'seq_mask': (4, 2477), 'msa_mask': (4, 508, 2477), 'msa_row_mask': (4, 508), 'random_crop_to_size_seed': (4, 2), 'template_mask': (4, 4), 'template_pseudo_beta': (4, 4, 2477, 3), 'template_pseudo_beta_mask': (4, 4, 2477), 'atom14_atom_exists': (4, 2477, 14), 'residx_atom14_to_atom37': (4, 2477, 14), 'residx_atom37_to_atom14': (4, 2477, 37), 'atom37_atom_exists': (4, 2477, 37), 'extra_msa': (4, 1024, 2477), 'extra_msa_mask': (4, 1024, 2477), 'extra_msa_row_mask': (4, 1024), 'bert_mask': (4, 508, 2477), 'true_msa': (4, 508, 2477), 'extra_has_deletion': (4, 1024, 2477), 'extra_deletion_value': (4, 1024, 2477), 'msa_feat': (4, 508, 2477, 49), 'target_feat': (4, 2477, 22)}
+I0812 11:19:54.596703 22941053982528 run_docker.py:275] I0812 03:19:54.595848 140062139142784 model.py:217] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (2477, 2477, 64)}, 'experimentally_resolved': {'logits': (2477, 37)}, 'masked_msa': {'logits': (508, 2477, 23)}, 'predicted_lddt': {'logits': (2477, 50)}, 'representations': {'msa': (508, 2477, 256), 'msa_first_row': (2477, 256), 'pair': (2477, 2477, 128), 'single': (2477, 384), 'structure_module': (2477, 384)}, 'structure_module': {'final_atom_mask': (2477, 37), 'final_atom_positions': (2477, 37, 3)}, 'plddt': (2477,), 'ranking_confidence': ()}
+I0812 11:19:54.743303 22941053982528 run_docker.py:275] I0812 03:19:54.742515 140062139142784 run_alphafold.py:295] Total JAX model model_2_pred_0 on P02751__I1627A predict time (includes compilation time, see --benchmark): 4185.0s
+I0812 11:24:45.232850 22941053982528 run_docker.py:275] I0812 03:24:45.231615 140062139142784 run_alphafold.py:280] Running model model_3_pred_0 on P02751__I1627A
+I0812 11:25:14.187284 22941053982528 run_docker.py:275] I0812 03:25:14.185986 140062139142784 model.py:179] Running predict with shape(feat) = {'aatype': (4, 2477), 'residue_index': (4, 2477), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 2477), 'msa_mask': (4, 512, 2477), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 2477, 14), 'residx_atom14_to_atom37': (4, 2477, 14), 'residx_atom37_to_atom14': (4, 2477, 37), 'atom37_atom_exists': (4, 2477, 37), 'extra_msa': (4, 5120, 2477), 'extra_msa_mask': (4, 5120, 2477), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 512, 2477), 'true_msa': (4, 512, 2477), 'extra_has_deletion': (4, 5120, 2477), 'extra_deletion_value': (4, 5120, 2477), 'msa_feat': (4, 512, 2477, 49), 'target_feat': (4, 2477, 22)}
+I0812 12:41:43.978949 22941053982528 run_docker.py:275] I0812 04:41:43.977975 140062139142784 model.py:217] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (2477, 2477, 64)}, 'experimentally_resolved': {'logits': (2477, 37)}, 'masked_msa': {'logits': (512, 2477, 23)}, 'predicted_lddt': {'logits': (2477, 50)}, 'representations': {'msa': (512, 2477, 256), 'msa_first_row': (2477, 256), 'pair': (2477, 2477, 128), 'single': (2477, 384), 'structure_module': (2477, 384)}, 'structure_module': {'final_atom_mask': (2477, 37), 'final_atom_positions': (2477, 37, 3)}, 'plddt': (2477,), 'ranking_confidence': ()}
+I0812 12:41:44.097062 22941053982528 run_docker.py:275] I0812 04:41:44.095934 140062139142784 run_alphafold.py:295] Total JAX model model_3_pred_0 on P02751__I1627A predict time (includes compilation time, see --benchmark): 4589.9s
+I0812 12:42:18.839901 22941053982528 run_docker.py:275] I0812 04:42:18.838741 140062139142784 run_alphafold.py:280] Running model model_4_pred_0 on P02751__I1627A
+I0812 12:42:43.955638 22941053982528 run_docker.py:275] I0812 04:42:43.952519 140062139142784 model.py:179] Running predict with shape(feat) = {'aatype': (4, 2477), 'residue_index': (4, 2477), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 2477), 'msa_mask': (4, 512, 2477), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 2477, 14), 'residx_atom14_to_atom37': (4, 2477, 14), 'residx_atom37_to_atom14': (4, 2477, 37), 'atom37_atom_exists': (4, 2477, 37), 'extra_msa': (4, 5120, 2477), 'extra_msa_mask': (4, 5120, 2477), 'extra_msa_row_mask': (4, 5120), 'bert_mask': (4, 512, 2477), 'true_msa': (4, 512, 2477), 'extra_has_deletion': (4, 5120, 2477), 'extra_deletion_value': (4, 5120, 2477), 'msa_feat': (4, 512, 2477, 49), 'target_feat': (4, 2477, 22)}
+I0812 13:55:09.919988 22941053982528 run_docker.py:275] I0812 05:55:09.919073 140062139142784 model.py:217] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (2477, 2477, 64)}, 'experimentally_resolved': {'logits': (2477, 37)}, 'masked_msa': {'logits': (512, 2477, 23)}, 'predicted_lddt': {'logits': (2477, 50)}, 'representations': {'msa': (512, 2477, 256), 'msa_first_row': (2477, 256), 'pair': (2477, 2477, 128), 'single': (2477, 384), 'structure_module': (2477, 384)}, 'structure_module': {'final_atom_mask': (2477, 37), 'final_atom_positions': (2477, 37, 3)}, 'plddt': (2477,), 'ranking_confidence': ()}
+I0812 13:55:10.043058 22941053982528 run_docker.py:275] I0812 05:55:10.042018 140062139142784 run_alphafold.py:295] Total JAX model model_4_pred_0 on P02751__I1627A predict time (includes compilation time, see --benchmark): 4346.1s
+I0812 13:56:02.548163 22941053982528 run_docker.py:275] I0812 05:56:02.546991 140062139142784 run_alphafold.py:280] Running model model_5_pred_0 on P02751__I1627A
+I0812 13:56:26.523928 22941053982528 run_docker.py:275] I0812 05:56:26.521460 140062139142784 model.py:179] Running predict with shape(feat) = {'aatype': (4, 2477), 'residue_index': (4, 2477), 'seq_length': (4,), 'is_distillation': (4,), 'seq_mask': (4, 2477), 'msa_mask': (4, 512, 2477), 'msa_row_mask': (4, 512), 'random_crop_to_size_seed': (4, 2), 'atom14_atom_exists': (4, 2477, 14), 'residx_atom14_to_atom37': (4, 2477, 14), 'residx_atom37_to_atom14': (4, 2477, 37), 'atom37_atom_exists': (4, 2477, 37), 'extra_msa': (4, 1024, 2477), 'extra_msa_mask': (4, 1024, 2477), 'extra_msa_row_mask': (4, 1024), 'bert_mask': (4, 512, 2477), 'true_msa': (4, 512, 2477), 'extra_has_deletion': (4, 1024, 2477), 'extra_deletion_value': (4, 1024, 2477), 'msa_feat': (4, 512, 2477, 49), 'target_feat': (4, 2477, 22)}
+I0812 15:17:10.137594 22941053982528 run_docker.py:275] I0812 07:17:10.135853 140062139142784 model.py:217] Output shape was {'distogram': {'bin_edges': (63,), 'logits': (2477, 2477, 64)}, 'experimentally_resolved': {'logits': (2477, 37)}, 'masked_msa': {'logits': (512, 2477, 23)}, 'predicted_lddt': {'logits': (2477, 50)}, 'representations': {'msa': (512, 2477, 256), 'msa_first_row': (2477, 256), 'pair': (2477, 2477, 128), 'single': (2477, 384), 'structure_module': (2477, 384)}, 'structure_module': {'final_atom_mask': (2477, 37), 'final_atom_positions': (2477, 37, 3)}, 'plddt': (2477,), 'ranking_confidence': ()}
+I0812 15:17:10.261943 22941053982528 run_docker.py:275] I0812 07:17:10.260239 140062139142784 run_alphafold.py:295] Total JAX model model_5_pred_0 on P02751__I1627A predict time (includes compilation time, see --benchmark): 4843.7s
+I0812 15:20:26.671625 22941053982528 run_docker.py:275] I0812 07:20:26.670194 140062139142784 amber_minimize.py:178] alterations info: {'nonstandard_residues': [], 'removed_heterogens': set(), 'missing_residues': {}, 'missing_heavy_atoms': {}, 'missing_terminals': {<Residue 2476 (GLU) of chain 0>: ['OXT']}, 'Se_in_MET': [], 'removed_chains': {0: []}}
+I0812 15:20:29.707884 22941053982528 run_docker.py:275] I0812 07:20:29.706816 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 1 of 100.
+I0812 15:20:32.828011 22941053982528 run_docker.py:275] I0812 07:20:32.827238 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:32.860461 22941053982528 run_docker.py:275] I0812 07:20:32.860220 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:32.871529 22941053982528 run_docker.py:275] I0812 07:20:32.871293 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 2 of 100.
+I0812 15:20:35.862462 22941053982528 run_docker.py:275] I0812 07:20:35.861732 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:35.889595 22941053982528 run_docker.py:275] I0812 07:20:35.889275 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:35.900407 22941053982528 run_docker.py:275] I0812 07:20:35.900165 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 3 of 100.
+I0812 15:20:37.787655 22941053982528 run_docker.py:275] I0812 07:20:37.787018 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:37.817222 22941053982528 run_docker.py:275] I0812 07:20:37.816996 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:37.827567 22941053982528 run_docker.py:275] I0812 07:20:37.827333 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 4 of 100.
+I0812 15:20:40.900991 22941053982528 run_docker.py:275] I0812 07:20:40.900318 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:40.927356 22941053982528 run_docker.py:275] I0812 07:20:40.927041 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:40.941037 22941053982528 run_docker.py:275] I0812 07:20:40.940838 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 5 of 100.
+I0812 15:20:43.964487 22941053982528 run_docker.py:275] I0812 07:20:43.963756 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:43.992142 22941053982528 run_docker.py:275] I0812 07:20:43.991804 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:44.006206 22941053982528 run_docker.py:275] I0812 07:20:44.006013 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 6 of 100.
+I0812 15:20:45.971264 22941053982528 run_docker.py:275] I0812 07:20:45.970629 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:46.008236 22941053982528 run_docker.py:275] I0812 07:20:46.007956 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:46.018858 22941053982528 run_docker.py:275] I0812 07:20:46.018641 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 7 of 100.
+I0812 15:20:49.059008 22941053982528 run_docker.py:275] I0812 07:20:49.058283 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:49.085803 22941053982528 run_docker.py:275] I0812 07:20:49.085330 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:49.095985 22941053982528 run_docker.py:275] I0812 07:20:49.095783 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 8 of 100.
+I0812 15:20:52.067841 22941053982528 run_docker.py:275] I0812 07:20:52.067201 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:52.106022 22941053982528 run_docker.py:275] I0812 07:20:52.105799 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:52.116755 22941053982528 run_docker.py:275] I0812 07:20:52.116527 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 9 of 100.
+I0812 15:20:53.990192 22941053982528 run_docker.py:275] I0812 07:20:53.989576 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:54.021525 22941053982528 run_docker.py:275] I0812 07:20:54.021193 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:54.034792 22941053982528 run_docker.py:275] I0812 07:20:54.034588 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 10 of 100.
+I0812 15:20:57.110279 22941053982528 run_docker.py:275] I0812 07:20:57.109569 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:20:57.135976 22941053982528 run_docker.py:275] I0812 07:20:57.135633 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:20:57.146632 22941053982528 run_docker.py:275] I0812 07:20:57.146157 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 11 of 100.
+I0812 15:21:00.215172 22941053982528 run_docker.py:275] I0812 07:21:00.214278 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:00.246056 22941053982528 run_docker.py:275] I0812 07:21:00.245233 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:00.277069 22941053982528 run_docker.py:275] I0812 07:21:00.276634 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 12 of 100.
+I0812 15:21:02.243001 22941053982528 run_docker.py:275] I0812 07:21:02.242283 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:02.274603 22941053982528 run_docker.py:275] I0812 07:21:02.273999 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:02.295145 22941053982528 run_docker.py:275] I0812 07:21:02.294808 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 13 of 100.
+I0812 15:21:05.345788 22941053982528 run_docker.py:275] I0812 07:21:05.344850 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:05.374430 22941053982528 run_docker.py:275] I0812 07:21:05.373711 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:05.388880 22941053982528 run_docker.py:275] I0812 07:21:05.388508 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 14 of 100.
+I0812 15:21:08.622102 22941053982528 run_docker.py:275] I0812 07:21:08.621290 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:08.646927 22941053982528 run_docker.py:275] I0812 07:21:08.646385 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:08.657583 22941053982528 run_docker.py:275] I0812 07:21:08.657214 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 15 of 100.
+I0812 15:21:11.708323 22941053982528 run_docker.py:275] I0812 07:21:11.707411 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:11.736272 22941053982528 run_docker.py:275] I0812 07:21:11.735859 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:11.752506 22941053982528 run_docker.py:275] I0812 07:21:11.751785 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 16 of 100.
+I0812 15:21:13.763305 22941053982528 run_docker.py:275] I0812 07:21:13.762535 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:13.794512 22941053982528 run_docker.py:275] I0812 07:21:13.793742 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:13.808871 22941053982528 run_docker.py:275] I0812 07:21:13.808308 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 17 of 100.
+I0812 15:21:17.058196 22941053982528 run_docker.py:275] I0812 07:21:17.057345 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:17.087070 22941053982528 run_docker.py:275] I0812 07:21:17.086666 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:17.097448 22941053982528 run_docker.py:275] I0812 07:21:17.097125 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 18 of 100.
+I0812 15:21:20.187549 22941053982528 run_docker.py:275] I0812 07:21:20.186614 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:20.213359 22941053982528 run_docker.py:275] I0812 07:21:20.212884 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:20.224358 22941053982528 run_docker.py:275] I0812 07:21:20.223974 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 19 of 100.
+I0812 15:21:22.116497 22941053982528 run_docker.py:275] I0812 07:21:22.115679 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:22.146404 22941053982528 run_docker.py:275] I0812 07:21:22.145884 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:22.156571 22941053982528 run_docker.py:275] I0812 07:21:22.156202 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 20 of 100.
+I0812 15:21:25.363142 22941053982528 run_docker.py:275] I0812 07:21:25.362030 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:25.390426 22941053982528 run_docker.py:275] I0812 07:21:25.389875 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:25.404255 22941053982528 run_docker.py:275] I0812 07:21:25.403878 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 21 of 100.
+I0812 15:21:28.537811 22941053982528 run_docker.py:275] I0812 07:21:28.536942 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:28.565180 22941053982528 run_docker.py:275] I0812 07:21:28.564806 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:28.579334 22941053982528 run_docker.py:275] I0812 07:21:28.579150 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 22 of 100.
+I0812 15:21:30.559358 22941053982528 run_docker.py:275] I0812 07:21:30.558640 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:30.590455 22941053982528 run_docker.py:275] I0812 07:21:30.590178 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:30.603675 22941053982528 run_docker.py:275] I0812 07:21:30.603461 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 23 of 100.
+I0812 15:21:33.852030 22941053982528 run_docker.py:275] I0812 07:21:33.850909 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:33.884855 22941053982528 run_docker.py:275] I0812 07:21:33.884251 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:33.917137 22941053982528 run_docker.py:275] I0812 07:21:33.916720 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 24 of 100.
+I0812 15:21:35.822463 22941053982528 run_docker.py:275] I0812 07:21:35.821637 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:35.854566 22941053982528 run_docker.py:275] I0812 07:21:35.854053 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:35.869184 22941053982528 run_docker.py:275] I0812 07:21:35.868877 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 25 of 100.
+I0812 15:21:38.986738 22941053982528 run_docker.py:275] I0812 07:21:38.985536 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:39.014538 22941053982528 run_docker.py:275] I0812 07:21:39.014059 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:39.028775 22941053982528 run_docker.py:275] I0812 07:21:39.028100 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 26 of 100.
+I0812 15:21:42.207847 22941053982528 run_docker.py:275] I0812 07:21:42.206845 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:42.234368 22941053982528 run_docker.py:275] I0812 07:21:42.233789 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:42.245304 22941053982528 run_docker.py:275] I0812 07:21:42.244761 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 27 of 100.
+I0812 15:21:45.313056 22941053982528 run_docker.py:275] I0812 07:21:45.312230 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:45.339376 22941053982528 run_docker.py:275] I0812 07:21:45.338867 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:45.350028 22941053982528 run_docker.py:275] I0812 07:21:45.349648 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 28 of 100.
+I0812 15:21:47.256145 22941053982528 run_docker.py:275] I0812 07:21:47.255468 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:47.287455 22941053982528 run_docker.py:275] I0812 07:21:47.286869 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:47.301057 22941053982528 run_docker.py:275] I0812 07:21:47.300675 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 29 of 100.
+I0812 15:21:50.531298 22941053982528 run_docker.py:275] I0812 07:21:50.530397 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:50.558448 22941053982528 run_docker.py:275] I0812 07:21:50.557874 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:50.571941 22941053982528 run_docker.py:275] I0812 07:21:50.571504 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 30 of 100.
+I0812 15:21:53.697805 22941053982528 run_docker.py:275] I0812 07:21:53.696964 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:53.725582 22941053982528 run_docker.py:275] I0812 07:21:53.724835 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:53.736303 22941053982528 run_docker.py:275] I0812 07:21:53.735722 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 31 of 100.
+I0812 15:21:55.641992 22941053982528 run_docker.py:275] I0812 07:21:55.641208 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:55.662980 22941053982528 run_docker.py:275] I0812 07:21:55.662590 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:55.673538 22941053982528 run_docker.py:275] I0812 07:21:55.673002 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 32 of 100.
+I0812 15:21:58.850455 22941053982528 run_docker.py:275] I0812 07:21:58.849629 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:21:58.878864 22941053982528 run_docker.py:275] I0812 07:21:58.878099 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:21:58.890237 22941053982528 run_docker.py:275] I0812 07:21:58.889896 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 33 of 100.
+I0812 15:22:00.798439 22941053982528 run_docker.py:275] I0812 07:22:00.797523 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:00.827668 22941053982528 run_docker.py:275] I0812 07:22:00.827187 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:00.838213 22941053982528 run_docker.py:275] I0812 07:22:00.837696 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 34 of 100.
+I0812 15:22:03.794695 22941053982528 run_docker.py:275] I0812 07:22:03.793884 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:03.822526 22941053982528 run_docker.py:275] I0812 07:22:03.821979 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:03.836206 22941053982528 run_docker.py:275] I0812 07:22:03.835716 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 35 of 100.
+I0812 15:22:06.960435 22941053982528 run_docker.py:275] I0812 07:22:06.959596 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:06.988429 22941053982528 run_docker.py:275] I0812 07:22:06.987796 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:07.001871 22941053982528 run_docker.py:275] I0812 07:22:07.001527 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 36 of 100.
+I0812 15:22:10.101217 22941053982528 run_docker.py:275] I0812 07:22:10.100444 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:10.128652 22941053982528 run_docker.py:275] I0812 07:22:10.127889 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:10.141975 22941053982528 run_docker.py:275] I0812 07:22:10.141450 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 37 of 100.
+I0812 15:22:12.185586 22941053982528 run_docker.py:275] I0812 07:22:12.184630 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:12.216609 22941053982528 run_docker.py:275] I0812 07:22:12.215979 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:12.230123 22941053982528 run_docker.py:275] I0812 07:22:12.229345 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 38 of 100.
+I0812 15:22:15.414596 22941053982528 run_docker.py:275] I0812 07:22:15.413846 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:15.441676 22941053982528 run_docker.py:275] I0812 07:22:15.441046 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:15.455224 22941053982528 run_docker.py:275] I0812 07:22:15.454834 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 39 of 100.
+I0812 15:22:18.572651 22941053982528 run_docker.py:275] I0812 07:22:18.571805 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:18.600731 22941053982528 run_docker.py:275] I0812 07:22:18.599941 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:18.614177 22941053982528 run_docker.py:275] I0812 07:22:18.613663 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 40 of 100.
+I0812 15:22:20.694259 22941053982528 run_docker.py:275] I0812 07:22:20.693319 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:20.725639 22941053982528 run_docker.py:275] I0812 07:22:20.724901 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:20.740105 22941053982528 run_docker.py:275] I0812 07:22:20.739620 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 41 of 100.
+I0812 15:22:23.958202 22941053982528 run_docker.py:275] I0812 07:22:23.957395 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:23.983337 22941053982528 run_docker.py:275] I0812 07:22:23.983109 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:23.994135 22941053982528 run_docker.py:275] I0812 07:22:23.993899 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 42 of 100.
+I0812 15:22:25.951246 22941053982528 run_docker.py:275] I0812 07:22:25.950567 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:25.986893 22941053982528 run_docker.py:275] I0812 07:22:25.986386 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:25.997819 22941053982528 run_docker.py:275] I0812 07:22:25.997391 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 43 of 100.
+I0812 15:22:28.979576 22941053982528 run_docker.py:275] I0812 07:22:28.978781 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:29.005415 22941053982528 run_docker.py:275] I0812 07:22:29.004665 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:29.015044 22941053982528 run_docker.py:275] I0812 07:22:29.014662 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 44 of 100.
+I0812 15:22:32.127862 22941053982528 run_docker.py:275] I0812 07:22:32.127095 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:32.155562 22941053982528 run_docker.py:275] I0812 07:22:32.154765 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:32.168551 22941053982528 run_docker.py:275] I0812 07:22:32.168170 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 45 of 100.
+I0812 15:22:35.301982 22941053982528 run_docker.py:275] I0812 07:22:35.301102 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:35.328811 22941053982528 run_docker.py:275] I0812 07:22:35.328189 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:35.341831 22941053982528 run_docker.py:275] I0812 07:22:35.341428 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 46 of 100.
+I0812 15:22:37.369723 22941053982528 run_docker.py:275] I0812 07:22:37.369036 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:37.399924 22941053982528 run_docker.py:275] I0812 07:22:37.399629 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:37.412203 22941053982528 run_docker.py:275] I0812 07:22:37.412001 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 47 of 100.
+I0812 15:22:40.631429 22941053982528 run_docker.py:275] I0812 07:22:40.630587 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:40.659233 22941053982528 run_docker.py:275] I0812 07:22:40.659016 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:40.670463 22941053982528 run_docker.py:275] I0812 07:22:40.670171 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 48 of 100.
+I0812 15:22:43.724472 22941053982528 run_docker.py:275] I0812 07:22:43.723837 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:43.750237 22941053982528 run_docker.py:275] I0812 07:22:43.749934 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:43.761168 22941053982528 run_docker.py:275] I0812 07:22:43.760888 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 49 of 100.
+I0812 15:22:45.657872 22941053982528 run_docker.py:275] I0812 07:22:45.656941 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:45.681342 22941053982528 run_docker.py:275] I0812 07:22:45.680942 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:45.695136 22941053982528 run_docker.py:275] I0812 07:22:45.694861 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 50 of 100.
+I0812 15:22:49.017723 22941053982528 run_docker.py:275] I0812 07:22:49.017095 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:49.053746 22941053982528 run_docker.py:275] I0812 07:22:49.052041 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:49.084408 22941053982528 run_docker.py:275] I0812 07:22:49.083956 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 51 of 100.
+I0812 15:22:51.048337 22941053982528 run_docker.py:275] I0812 07:22:51.047009 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:51.078625 22941053982528 run_docker.py:275] I0812 07:22:51.078308 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:51.089142 22941053982528 run_docker.py:275] I0812 07:22:51.088927 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 52 of 100.
+I0812 15:22:54.096089 22941053982528 run_docker.py:275] I0812 07:22:54.095154 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:54.124868 22941053982528 run_docker.py:275] I0812 07:22:54.124476 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:54.135629 22941053982528 run_docker.py:275] I0812 07:22:54.135366 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 53 of 100.
+I0812 15:22:57.263216 22941053982528 run_docker.py:275] I0812 07:22:57.262616 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:22:57.291184 22941053982528 run_docker.py:275] I0812 07:22:57.290596 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:22:57.304240 22941053982528 run_docker.py:275] I0812 07:22:57.303881 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 54 of 100.
+I0812 15:23:00.414181 22941053982528 run_docker.py:275] I0812 07:23:00.413091 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:00.440452 22941053982528 run_docker.py:275] I0812 07:23:00.439960 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:00.451321 22941053982528 run_docker.py:275] I0812 07:23:00.450885 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 55 of 100.
+I0812 15:23:02.355810 22941053982528 run_docker.py:275] I0812 07:23:02.355093 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:02.387509 22941053982528 run_docker.py:275] I0812 07:23:02.386926 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:02.401556 22941053982528 run_docker.py:275] I0812 07:23:02.401017 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 56 of 100.
+I0812 15:23:05.571991 22941053982528 run_docker.py:275] I0812 07:23:05.571188 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:05.599376 22941053982528 run_docker.py:275] I0812 07:23:05.598748 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:05.613007 22941053982528 run_docker.py:275] I0812 07:23:05.612596 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 57 of 100.
+I0812 15:23:08.671210 22941053982528 run_docker.py:275] I0812 07:23:08.670397 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:08.699215 22941053982528 run_docker.py:275] I0812 07:23:08.698625 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:08.713106 22941053982528 run_docker.py:275] I0812 07:23:08.712729 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 58 of 100.
+I0812 15:23:10.618307 22941053982528 run_docker.py:275] I0812 07:23:10.617478 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:10.651400 22941053982528 run_docker.py:275] I0812 07:23:10.650818 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:10.664698 22941053982528 run_docker.py:275] I0812 07:23:10.664340 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 59 of 100.
+I0812 15:23:13.867451 22941053982528 run_docker.py:275] I0812 07:23:13.866577 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:13.893741 22941053982528 run_docker.py:275] I0812 07:23:13.892923 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:13.904402 22941053982528 run_docker.py:275] I0812 07:23:13.904024 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 60 of 100.
+I0812 15:23:15.806152 22941053982528 run_docker.py:275] I0812 07:23:15.805102 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:15.837581 22941053982528 run_docker.py:275] I0812 07:23:15.836724 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:15.850517 22941053982528 run_docker.py:275] I0812 07:23:15.850190 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 61 of 100.
+I0812 15:23:18.866971 22941053982528 run_docker.py:275] I0812 07:23:18.866103 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:18.893978 22941053982528 run_docker.py:275] I0812 07:23:18.893170 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:18.906900 22941053982528 run_docker.py:275] I0812 07:23:18.906547 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 62 of 100.
+I0812 15:23:22.061108 22941053982528 run_docker.py:275] I0812 07:23:22.060123 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:22.086591 22941053982528 run_docker.py:275] I0812 07:23:22.086022 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:22.096471 22941053982528 run_docker.py:275] I0812 07:23:22.096074 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 63 of 100.
+I0812 15:23:25.139979 22941053982528 run_docker.py:275] I0812 07:23:25.139190 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:25.165509 22941053982528 run_docker.py:275] I0812 07:23:25.164950 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:25.176171 22941053982528 run_docker.py:275] I0812 07:23:25.175733 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 64 of 100.
+I0812 15:23:27.056169 22941053982528 run_docker.py:275] I0812 07:23:27.055356 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:27.087798 22941053982528 run_docker.py:275] I0812 07:23:27.087089 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:27.101596 22941053982528 run_docker.py:275] I0812 07:23:27.101092 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 65 of 100.
+I0812 15:23:30.354219 22941053982528 run_docker.py:275] I0812 07:23:30.353258 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:30.382206 22941053982528 run_docker.py:275] I0812 07:23:30.381320 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:30.395792 22941053982528 run_docker.py:275] I0812 07:23:30.395444 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 66 of 100.
+I0812 15:23:32.291652 22941053982528 run_docker.py:275] I0812 07:23:32.290735 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:32.321612 22941053982528 run_docker.py:275] I0812 07:23:32.320919 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:32.331781 22941053982528 run_docker.py:275] I0812 07:23:32.331369 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 67 of 100.
+I0812 15:23:35.329748 22941053982528 run_docker.py:275] I0812 07:23:35.328776 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:35.354681 22941053982528 run_docker.py:275] I0812 07:23:35.354142 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:35.364817 22941053982528 run_docker.py:275] I0812 07:23:35.364466 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 68 of 100.
+I0812 15:23:38.462637 22941053982528 run_docker.py:275] I0812 07:23:38.461844 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:38.488064 22941053982528 run_docker.py:275] I0812 07:23:38.487352 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:38.498068 22941053982528 run_docker.py:275] I0812 07:23:38.497600 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 69 of 100.
+I0812 15:23:41.493881 22941053982528 run_docker.py:275] I0812 07:23:41.493058 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:41.519408 22941053982528 run_docker.py:275] I0812 07:23:41.518854 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:41.529965 22941053982528 run_docker.py:275] I0812 07:23:41.529534 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 70 of 100.
+I0812 15:23:43.406723 22941053982528 run_docker.py:275] I0812 07:23:43.405908 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:43.440254 22941053982528 run_docker.py:275] I0812 07:23:43.439704 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:43.453282 22941053982528 run_docker.py:275] I0812 07:23:43.452814 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 71 of 100.
+I0812 15:23:46.645261 22941053982528 run_docker.py:275] I0812 07:23:46.644317 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:46.671783 22941053982528 run_docker.py:275] I0812 07:23:46.671261 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:46.681889 22941053982528 run_docker.py:275] I0812 07:23:46.681466 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 72 of 100.
+I0812 15:23:49.686733 22941053982528 run_docker.py:275] I0812 07:23:49.685842 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:49.713240 22941053982528 run_docker.py:275] I0812 07:23:49.712736 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:49.723492 22941053982528 run_docker.py:275] I0812 07:23:49.723178 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 73 of 100.
+I0812 15:23:51.616808 22941053982528 run_docker.py:275] I0812 07:23:51.616092 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:51.648339 22941053982528 run_docker.py:275] I0812 07:23:51.647842 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:51.661642 22941053982528 run_docker.py:275] I0812 07:23:51.661144 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 74 of 100.
+I0812 15:23:54.864439 22941053982528 run_docker.py:275] I0812 07:23:54.863669 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:54.891907 22941053982528 run_docker.py:275] I0812 07:23:54.891425 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:54.903083 22941053982528 run_docker.py:275] I0812 07:23:54.902706 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 75 of 100.
+I0812 15:23:56.791659 22941053982528 run_docker.py:275] I0812 07:23:56.790759 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:56.821224 22941053982528 run_docker.py:275] I0812 07:23:56.820715 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:56.831151 22941053982528 run_docker.py:275] I0812 07:23:56.830810 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 76 of 100.
+I0812 15:23:59.824775 22941053982528 run_docker.py:275] I0812 07:23:59.823999 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:23:59.850895 22941053982528 run_docker.py:275] I0812 07:23:59.850583 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:23:59.861022 22941053982528 run_docker.py:275] I0812 07:23:59.860734 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 77 of 100.
+I0812 15:24:02.934861 22941053982528 run_docker.py:275] I0812 07:24:02.933912 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:02.962606 22941053982528 run_docker.py:275] I0812 07:24:02.961977 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:02.976345 22941053982528 run_docker.py:275] I0812 07:24:02.975960 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 78 of 100.
+I0812 15:24:06.066490 22941053982528 run_docker.py:275] I0812 07:24:06.065536 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:06.092638 22941053982528 run_docker.py:275] I0812 07:24:06.092071 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:06.103074 22941053982528 run_docker.py:275] I0812 07:24:06.102741 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 79 of 100.
+I0812 15:24:07.986808 22941053982528 run_docker.py:275] I0812 07:24:07.985974 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:08.017552 22941053982528 run_docker.py:275] I0812 07:24:08.016830 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:08.031521 22941053982528 run_docker.py:275] I0812 07:24:08.031183 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 80 of 100.
+I0812 15:24:11.217398 22941053982528 run_docker.py:275] I0812 07:24:11.216548 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:11.243145 22941053982528 run_docker.py:275] I0812 07:24:11.242471 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:11.253602 22941053982528 run_docker.py:275] I0812 07:24:11.253225 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 81 of 100.
+I0812 15:24:14.291033 22941053982528 run_docker.py:275] I0812 07:24:14.290033 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:14.317156 22941053982528 run_docker.py:275] I0812 07:24:14.316386 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:14.331056 22941053982528 run_docker.py:275] I0812 07:24:14.330698 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 82 of 100.
+I0812 15:24:16.332274 22941053982528 run_docker.py:275] I0812 07:24:16.331468 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:16.362662 22941053982528 run_docker.py:275] I0812 07:24:16.361765 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:16.376411 22941053982528 run_docker.py:275] I0812 07:24:16.375927 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 83 of 100.
+I0812 15:24:19.645177 22941053982528 run_docker.py:275] I0812 07:24:19.643987 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:19.671852 22941053982528 run_docker.py:275] I0812 07:24:19.671145 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:19.685712 22941053982528 run_docker.py:275] I0812 07:24:19.685200 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 84 of 100.
+I0812 15:24:21.636891 22941053982528 run_docker.py:275] I0812 07:24:21.636051 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:21.673989 22941053982528 run_docker.py:275] I0812 07:24:21.673420 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:21.684256 22941053982528 run_docker.py:275] I0812 07:24:21.683679 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 85 of 100.
+I0812 15:24:24.772877 22941053982528 run_docker.py:275] I0812 07:24:24.771915 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:24.801873 22941053982528 run_docker.py:275] I0812 07:24:24.801217 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:24.815360 22941053982528 run_docker.py:275] I0812 07:24:24.815058 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 86 of 100.
+I0812 15:24:27.946722 22941053982528 run_docker.py:275] I0812 07:24:27.945902 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:27.973248 22941053982528 run_docker.py:275] I0812 07:24:27.972528 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:27.983333 22941053982528 run_docker.py:275] I0812 07:24:27.982825 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 87 of 100.
+I0812 15:24:31.238929 22941053982528 run_docker.py:275] I0812 07:24:31.237721 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:31.266730 22941053982528 run_docker.py:275] I0812 07:24:31.265878 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:31.280498 22941053982528 run_docker.py:275] I0812 07:24:31.280102 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 88 of 100.
+I0812 15:24:33.227701 22941053982528 run_docker.py:275] I0812 07:24:33.226696 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:33.258695 22941053982528 run_docker.py:275] I0812 07:24:33.257905 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:33.271875 22941053982528 run_docker.py:275] I0812 07:24:33.271488 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 89 of 100.
+I0812 15:24:36.511161 22941053982528 run_docker.py:275] I0812 07:24:36.510046 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:36.539125 22941053982528 run_docker.py:275] I0812 07:24:36.538276 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:36.570704 22941053982528 run_docker.py:275] I0812 07:24:36.551683 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 90 of 100.
+I0812 15:24:39.695681 22941053982528 run_docker.py:275] I0812 07:24:39.694619 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:39.721803 22941053982528 run_docker.py:275] I0812 07:24:39.721218 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:39.731910 22941053982528 run_docker.py:275] I0812 07:24:39.731519 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 91 of 100.
+I0812 15:24:41.622498 22941053982528 run_docker.py:275] I0812 07:24:41.621711 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:41.653087 22941053982528 run_docker.py:275] I0812 07:24:41.652610 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:41.666094 22941053982528 run_docker.py:275] I0812 07:24:41.665821 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 92 of 100.
+I0812 15:24:44.840952 22941053982528 run_docker.py:275] I0812 07:24:44.840329 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:44.869101 22941053982528 run_docker.py:275] I0812 07:24:44.868721 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:44.883297 22941053982528 run_docker.py:275] I0812 07:24:44.883038 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 93 of 100.
+I0812 15:24:46.722269 22941053982528 run_docker.py:275] I0812 07:24:46.721481 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:46.744522 22941053982528 run_docker.py:275] I0812 07:24:46.744070 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:46.757386 22941053982528 run_docker.py:275] I0812 07:24:46.757159 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 94 of 100.
+I0812 15:24:49.761343 22941053982528 run_docker.py:275] I0812 07:24:49.760648 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:49.788750 22941053982528 run_docker.py:275] I0812 07:24:49.788363 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:49.802216 22941053982528 run_docker.py:275] I0812 07:24:49.801939 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 95 of 100.
+I0812 15:24:52.960899 22941053982528 run_docker.py:275] I0812 07:24:52.960303 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:52.988541 22941053982528 run_docker.py:275] I0812 07:24:52.988001 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:53.002106 22941053982528 run_docker.py:275] I0812 07:24:53.001770 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 96 of 100.
+I0812 15:24:56.109085 22941053982528 run_docker.py:275] I0812 07:24:56.108368 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:56.135971 22941053982528 run_docker.py:275] I0812 07:24:56.135691 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:56.146959 22941053982528 run_docker.py:275] I0812 07:24:56.146580 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 97 of 100.
+I0812 15:24:58.082408 22941053982528 run_docker.py:275] I0812 07:24:58.081102 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:24:58.115456 22941053982528 run_docker.py:275] I0812 07:24:58.114755 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:24:58.128215 22941053982528 run_docker.py:275] I0812 07:24:58.127840 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 98 of 100.
+I0812 15:25:01.297962 22941053982528 run_docker.py:275] I0812 07:25:01.297197 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:25:01.327845 22941053982528 run_docker.py:275] I0812 07:25:01.327443 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:25:01.341860 22941053982528 run_docker.py:275] I0812 07:25:01.341578 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 99 of 100.
+I0812 15:25:03.240215 22941053982528 run_docker.py:275] I0812 07:25:03.239346 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:25:03.269341 22941053982528 run_docker.py:275] I0812 07:25:03.269049 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:25:03.279704 22941053982528 run_docker.py:275] I0812 07:25:03.279444 140062139142784 amber_minimize.py:408] Minimizing protein, attempt 100 of 100.
+I0812 15:25:06.317226 22941053982528 run_docker.py:275] I0812 07:25:06.316318 140062139142784 amber_minimize.py:69] Restraining 19146 / 37519 particles.
+I0812 15:25:06.342853 22941053982528 run_docker.py:275] I0812 07:25:06.342412 140062139142784 amber_minimize.py:418] No compatible CUDA device is available
+I0812 15:25:06.354057 22941053982528 run_docker.py:275] Traceback (most recent call last):
+I0812 15:25:06.354582 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/run_alphafold.py", line 585, in <module>
+I0812 15:25:06.354746 22941053982528 run_docker.py:275] app.run(main)
+I0812 15:25:06.354972 22941053982528 run_docker.py:275] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 312, in run
+I0812 15:25:06.355043 22941053982528 run_docker.py:275] _run_main(main, args)
+I0812 15:25:06.355100 22941053982528 run_docker.py:275] File "/opt/conda/lib/python3.11/site-packages/absl/app.py", line 258, in _run_main
+I0812 15:25:06.355153 22941053982528 run_docker.py:275] sys.exit(main(argv))
+I0812 15:25:06.355204 22941053982528 run_docker.py:275] ^^^^^^^^^^
+I0812 15:25:06.355255 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/run_alphafold.py", line 558, in main
+I0812 15:25:06.355306 22941053982528 run_docker.py:275] predict_structure(
+I0812 15:25:06.355354 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/run_alphafold.py", line 376, in predict_structure
+I0812 15:25:06.355402 22941053982528 run_docker.py:275] relaxed_pdb_str, _, violations = amber_relaxer.process(
+I0812 15:25:06.355451 22941053982528 run_docker.py:275] ^^^^^^^^^^^^^^^^^^^^^^
+I0812 15:25:06.355498 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/alphafold/relax/relax.py", line 62, in process
+I0812 15:25:06.355547 22941053982528 run_docker.py:275] out = amber_minimize.run_pipeline(
+I0812 15:25:06.355595 22941053982528 run_docker.py:275] ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I0812 15:25:06.355644 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/alphafold/relax/amber_minimize.py", line 476, in run_pipeline
+I0812 15:25:06.355713 22941053982528 run_docker.py:275] ret = _run_one_iteration(
+I0812 15:25:06.355766 22941053982528 run_docker.py:275] ^^^^^^^^^^^^^^^^^^^
+I0812 15:25:06.355814 22941053982528 run_docker.py:275] File "/mnt/custom_run_alphafold/alphafold/relax/amber_minimize.py", line 420, in _run_one_iteration
+I0812 15:25:06.355881 22941053982528 run_docker.py:275] raise ValueError(f"Minimization failed after {max_attempts} attempts.")
+I0812 15:25:06.355932 22941053982528 run_docker.py:275] ValueError: Minimization failed after 100 attempts.
